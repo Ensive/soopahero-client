@@ -7,7 +7,6 @@ import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
-import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { HeaderDirective } from '../app/components/header/header.directive';
 import { TranslationService } from '../app/components/translation-service/translation.service';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
@@ -35,6 +34,5 @@ angular.module('soopaheroClient',
   .service('webDevTec', WebDevTecService)
   .service('translationService', TranslationService)
   .controller('MainController', MainController)
-  .directive('acmeNavbar', NavbarDirective)
   .directive('acmeMalarkey', MalarkeyDirective)
   .directive('shHeader', HeaderDirective);
