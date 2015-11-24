@@ -17,6 +17,7 @@ gulp.task('watch', ['scripts:watch', 'inject'], function () {
   gulp.watch([
     path.join(conf.paths.src, '/app/**/*.css'),
     path.join(conf.paths.src, '/app/**/*.sass'),
+    path.join(conf.paths.src, '/assets/sass/*.sass'),
     path.join(conf.paths.src, '/resources/**/*.json')
   ], function(event) {
     if(isOnlyChange(event)) {

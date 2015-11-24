@@ -6,7 +6,8 @@ export function HeaderDirective() {
     templateUrl: 'app/components/header/header.html',
     controller: HeaderController,
     controllerAs: 'vm',
-    bindToController: true
+    bindToController: true,
+    replace: true
   };
 
   return directive;
@@ -16,10 +17,12 @@ class HeaderController {
   constructor(translationService) {
     'ngInject';
 
+    this.text = {};
+
     translationService.getGeneralTranslations()
       .then((translations) => {
-        this.logIn = translations.logIn;
-        this.signUp = translations.signUp;
+        this.text.logIn = translations.logIn;
+        this.text.signUp = translations.signUp;
       });
   }
 

@@ -1,10 +1,14 @@
 <div class="header-wrapper">
-  <header class="header" role="banner">
-    <img src="" alt="Soopahero logo" class="header__logo">
+  <header class="header" layout="row" layout-sm="column" layout-align="start center" role="banner">
 
+    <a href="" class="header__logo-link">
+      <img src="../../../assets/images/soopahero-logo.svg" alt="Soopahero logo" class="header__logo-img">
+    </a>
+
+    <span flex></span>
     <div class="header__actions">
-      <a href="#" class="sh-button sh-button--login" role="button">{{ vm.logIn }}</a>
-      <a href="#" class="sh-button sh-button--signup" role="button">{{ vm.signUp }}</a>
+      <md-button href="" class="sh-button sh-button--login">{{ vm.text.logIn }}</md-button>
+      <md-button href="" class="sh-button sh-button--signup">{{ vm.text.signUp }}</md-button>
     </div>
   </header>
 </div>
