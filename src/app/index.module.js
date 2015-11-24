@@ -7,6 +7,7 @@ import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { HeaderDirective } from '../app/components/header/header.directive';
+import { FooterDirective } from '../app/components/footer/footer.directive';
 import { TranslationService } from '../app/components/translation-service/translation.service';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
@@ -33,4 +34,5 @@ angular.module('soopaheroClient',
   .service('translationService', TranslationService)
   .controller('MainController', MainController)
   .directive('acmeMalarkey', MalarkeyDirective)
-  .directive('shHeader', HeaderDirective);
+  .directive('shHeader', HeaderDirective)
+  .directive('shFooter', FooterDirective);

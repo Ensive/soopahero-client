@@ -2,7 +2,10 @@
   "SH": {
     "GENERAL": {
       "LOG_IN": "Войти",
-      "SIGN_UP": "Регистрация"
+      "SIGN_UP": "Регистрация",
+      "ALL_RIGHTS_RESERVED": "Все права защищены",
+      "TERMS_AND_CONDITIONS": "Условия пользования",
+      "CONTACT_US": "Контакты"
     }
   }
 }

@@ -9,13 +9,6 @@ export function config($logProvider, $translateProvider, $mdThemingProvider, SH_
     .primaryPalette('light-green')
     .accentPalette('orange');
 
-  // Set options third-party lib
-  //toastrConfig.allowHtml = true;
-  //toastrConfig.timeOut = 3000;
-  //toastrConfig.positionClass = 'toast-top-right';
-  //toastrConfig.preventDuplicates = true;
-  //toastrConfig.progressBar = true;
-
   // set translation options
   $translateProvider
     .useStaticFilesLoader({

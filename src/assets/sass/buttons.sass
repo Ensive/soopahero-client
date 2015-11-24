@@ -1,8 +1,6 @@
 .sh-button,
 a.sh-button
   border-radius: 40px
-  border-style: solid
-  border-width: 1px
   font-size: 14px
   text-transform: initial
   transition: .2s background-color ease, .2s border-color ease, .2s color ease
@@ -15,17 +13,24 @@ a.sh-button
     margin: 0
 
   &--login
-    background-color: #BFD72E
-    border-color: transparent
+    background-color: $sh-green
+    border: 1px solid transparent
     color: #fff
     margin-right: 5px
     &:not([disabled]):hover
       background-color: #ADC543
 
   &--signup
-    border-color: #C0C0C0
+    border: 1px solid #C0C0C0
     color: #9D9D9D
     &:not([disabled]):hover
       background-color: #fff
-      border: 1px solid #797979
+      border-color: #797979
       color: #797979
+
+  &--footer
+    margin: 0
+    color: #9D9D9D
+    padding: 0 15px
+    &:not([disabled]):hover
+      color: #4A4A4A

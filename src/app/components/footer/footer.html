@@ -1,0 +1,24 @@
+<div class="footer-wrapper">
+  <footer class="footer"
+          layout="row"
+          layout-md="column"
+          layout-sm="column"
+          layout-align="start center"
+          layout-align-md="center center"
+          layout-align-sm="center center"
+          role="contentinfo">
+    <small class="footer__rights md-body-1" flex-order-md="3" flex-order-sm="3">
+      &copy; {{ vm.currentYear }} <a href="" class="footer__rights-link">Soopahero Inc.</a>
+      {{ vm.text.allRightsReserved }}.
+    </small>
+
+    <span flex flex-order-md="2" flex-order-sm="2"></span>
+
+    <div class="footer__links" layout-sm="column" flex-order-md="1" flex-order-sm="1">
+      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.logIn }}</md-button>
+      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.signUp }}</md-button>
+      <md-button href="" class="sh-button sh-button--footer" ng-bind-html="vm.text.termsAndConditions"></md-button>
+      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.contactUs }}</md-button>
+    </div>
+  </footer>
+</div>
