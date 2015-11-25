@@ -15,10 +15,10 @@
     <span flex flex-order-md="2" flex-order-sm="2"></span>
 
     <div class="footer__links" layout-sm="column" flex-order-md="1" flex-order-sm="1">
-      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.logIn }}</md-button>
-      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.signUp }}</md-button>
-      <md-button href="" class="sh-button sh-button--footer" ng-bind-html="vm.text.termsAndConditions"></md-button>
-      <md-button href="" class="sh-button sh-button--footer">{{ vm.text.contactUs }}</md-button>
+      <md-button href="" class="sh-button sh-button--footer">{{ 'SH.FOOTER.LOG_IN' | translate }}</md-button>
+      <md-button href="" class="sh-button sh-button--footer">{{ 'SH.FOOTER.SIGN_UP' | translate }}</md-button>
+      <md-button href="" class="sh-button sh-button--footer" ng-bind-html="'SH.FOOTER.TERMS_AND_CONDITIONS' | translate" aria-label="Terms and Conditions"></md-button>
+      <md-button href="" class="sh-button sh-button--footer">{{ 'SH.FOOTER.CONTACT_US' | translate }}</md-button>
     </div>
   </footer>
 </div>

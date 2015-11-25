@@ -1,11 +1,19 @@
 {
   "SH": {
-    "GENERAL": {
+    "HEADER": {
       "LOG_IN": "Войти",
-      "SIGN_UP": "Регистрация",
+      "SIGN_UP": "Регистрация"
+    },
+    "FOOTER": {
+      "LOG_IN": "@:SH.HEADER.LOG_IN",
+      "SIGN_UP": "@:SH.HEADER.SIGN_UP",
       "ALL_RIGHTS_RESERVED": "Все права защищены",
       "TERMS_AND_CONDITIONS": "Условия пользования",
       "CONTACT_US": "Контакты"
+    },
+    "LOGIN": {
+      "TITLE": "@:SH.HEADER.LOG_IN",
+      "SUB_TITLE": "чтобы использовать свой аккаунт"
     }
   }
 }

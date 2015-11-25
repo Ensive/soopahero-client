@@ -15,16 +15,14 @@ export function HeaderDirective() {
 }
 
 class HeaderController {
-  constructor(translationService) {
+  constructor(loginService) {
     'ngInject';
+    this.loginService = loginService;
+    this.isUserLoggedIn = false;
+  }
 
-    this.text = {};
-
-    translationService.getGeneralTranslations()
-      .then((translations) => {
-        this.text.logIn = translations.logIn;
-        this.text.signUp = translations.signUp;
-      });
+  openLoginForm(e) {
+    this.loginService.openLoginForm(e);
   }
 
 }

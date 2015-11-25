@@ -1,11 +1,19 @@
 {
   "SH": {
-    "GENERAL": {
+    "HEADER": {
       "LOG_IN": "Log in",
-      "SIGN_UP": "Sign up",
+      "SIGN_UP": "Sign up"
+    },
+    "FOOTER": {
+      "LOG_IN": "@:SH.HEADER.LOG_IN",
+      "SIGN_UP": "@:SH.HEADER.SIGN_UP",
       "ALL_RIGHTS_RESERVED": "All rights reserved",
       "TERMS_AND_CONDITIONS": "Terms &amp; Conditions",
       "CONTACT_US": "Contact Us"
+    },
+    "LOGIN": {
+      "TITLE": "@:SH.HEADER.LOG_IN",
+      "SUB_TITLE": "to start using your account"
     }
   }
 }

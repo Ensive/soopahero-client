@@ -6,9 +6,12 @@
     </a>
 
     <span flex></span>
-    <div class="header__actions">
-      <md-button href="" class="sh-button sh-button--login">{{ vm.text.logIn }}</md-button>
-      <md-button href="" class="sh-button sh-button--signup">{{ vm.text.signUp }}</md-button>
+    <!-- if user not logged in -->
+    <div class="header__actions" ng-if="!vm.isUserLoggedIn">
+      <md-button ng-click="vm.openLoginForm($event)" href="" class="sh-button sh-button--login">{{ 'SH.HEADER.LOG_IN' | translate }}</md-button>
+      <md-button ng-click="" href="" class="sh-button sh-button--signup">{{ 'SH.HEADER.SIGN_UP' | translate }}</md-button>
     </div>
+    <!-- if user logged in -->
+    <!-- ... -->
   </header>
 </div>

@@ -15,21 +15,8 @@ export function FooterDirective() {
 }
 
 class FooterController {
-  constructor(translationService) {
+  constructor() {
     'ngInject';
-
-    this.text = {};
     this.currentYear = new Date().getFullYear();
-
-    translationService.getGeneralTranslations()
-      .then((translations) => {
-        let text = this.text;
-
-        text.logIn = translations.logIn;
-        text.signUp = translations.signUp;
-        text.allRightsReserved = translations.allRightsReserved;
-        text.termsAndConditions = translations.termsAndConditions;
-        text.contactUs = translations.contactUs;
-      });
   }
 }
