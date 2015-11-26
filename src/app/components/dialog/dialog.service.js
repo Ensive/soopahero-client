@@ -9,6 +9,7 @@ export class DialogService {
   showAdvancedDialog(e) {
     return this.$mdDialog.show({
       controller: 'LoginController',
+      controllerAs: 'vm',
       templateUrl: 'app/components/login/login.html',
       parent: angular.element(this.$document[0].body),
       targetEvent: e,

@@ -13,7 +13,12 @@
     },
     "LOGIN": {
       "TITLE": "@:SH.HEADER.LOG_IN",
-      "SUB_TITLE": "to start using your account"
+      "SUB_TITLE": "to start using your account",
+      "LABEL_NAME": "Name or Email address",
+      "LABEL_PASSWORD": "Password",
+      "TEXT_NEW": "New",
+      "TEXT_LOG_IN": "@:SH.HEADER.LOG_IN",
+      "TEXT_SIGN_UP": "@:SH.HEADER.SIGN_UP"
     }
   }
 }

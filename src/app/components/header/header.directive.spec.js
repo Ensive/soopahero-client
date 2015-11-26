@@ -17,7 +17,7 @@ describe('directive header', () => {
   }));
 
   beforeEach(inject(($compile, $rootScope) => {
-    element = angular.element('<sh-header ng-cloak></sh-header>');
+    element = angular.element('<sh-header></sh-header>');
 
     // element
     $compile(element)($rootScope.$new());

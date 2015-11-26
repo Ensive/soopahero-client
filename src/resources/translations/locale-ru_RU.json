@@ -13,7 +13,12 @@
     },
     "LOGIN": {
       "TITLE": "@:SH.HEADER.LOG_IN",
-      "SUB_TITLE": "чтобы использовать свой аккаунт"
+      "SUB_TITLE": "чтобы использовать свой аккаунт",
+      "LABEL_NAME": "Имя или электронная почта",
+      "LABEL_PASSWORD": "Пароль",
+      "TEXT_NEW": "Новенький",
+      "TEXT_LOG_IN": "@:SH.HEADER.LOG_IN",
+      "TEXT_SIGN_UP": "@:SH.HEADER.SIGN_UP"
     }
   }
 }

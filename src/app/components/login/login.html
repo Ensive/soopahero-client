@@ -1,13 +1,13 @@
-<md-dialog aria-label="Log in" ng-cloak>
-  <form>
-    <md-dialog-content>
-      <div class="login-dialog md-dialog-content">
-        <section>
-          <h2 class="login-dialog__title" ng-bind="'SH.LOGIN.TITLE' | translate"></h2>
-          <h3 class="login-dialog__subtitle" ng-bind="'SH.LOGIN.SUB_TITLE' | translate"></h3>
-        </section>
+<md-dialog aria-label="Log in">
+  <md-dialog-content>
 
-      </div>
-    </md-dialog-content>
-  </form>
+    <div class="login-dialog md-dialog-content">
+      <section>
+        <h2 class="login-dialog__title" translate-once="SH.LOGIN.TITLE"></h2>
+        <h3 class="login-dialog__subtitle" translate-once="SH.LOGIN.SUB_TITLE"></h3>
+        <ng-include src="'/app/components/login/login-form.html'"></ng-include>
+      </section>
+    </div>
+
+  </md-dialog-content>
 </md-dialog>
