@@ -5,6 +5,7 @@ import { routerConfig } from './index.route';
 import { constants } from './index.constants';
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
+import { LoginController } from '../app/components/login/login.controller';
 //import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { HeaderDirective } from '../app/components/header/header.directive';
 import { DialogService } from '../app/components/dialog/dialog.service';
@@ -33,6 +34,7 @@ angular.module('soopaheroClient',
   .run(runBlock)
   //.service('webDevTec', WebDevTecService)
   .controller('MainController', MainController)
+  .controller('LoginController', LoginController)
   //.directive('acmeMalarkey', MalarkeyDirective)
   .service('dialogService', DialogService)
   .service('loginService', LoginService)

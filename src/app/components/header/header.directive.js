@@ -22,7 +22,7 @@ class HeaderController {
   }
 
   openLoginForm(e) {
-    this.loginService.openLoginForm(e);
+    this.loginService.showLoginDialog(e);
   }
 
 }
