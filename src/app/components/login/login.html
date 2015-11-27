@@ -1,13 +1,16 @@
 <md-dialog aria-label="Log in">
-  <md-dialog-content>
+  <md-dialog-content class="login-dialog" layout="row">
 
-    <div class="login-dialog md-dialog-content">
+    <div class="login-form-wrapper">
       <section>
         <h2 class="login-dialog__title" translate-once="SH.LOGIN.TITLE"></h2>
         <h3 class="login-dialog__subtitle" translate-once="SH.LOGIN.SUB_TITLE"></h3>
         <ng-include src="'/app/components/login/login-form.html'"></ng-include>
+        <!-- include facebook and twitter buttons -->
       </section>
     </div>
+
+    <div class="login-form-bg"></div>
 
   </md-dialog-content>
 </md-dialog>

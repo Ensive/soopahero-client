@@ -18,7 +18,8 @@
       "LABEL_PASSWORD": "Пароль",
       "TEXT_NEW": "Новенький",
       "TEXT_LOG_IN": "@:SH.HEADER.LOG_IN",
-      "TEXT_SIGN_UP": "@:SH.HEADER.SIGN_UP"
+      "TEXT_SIGN_UP": "@:SH.HEADER.SIGN_UP",
+      "TEXT_FORGOT_PASSWORD": "Забыли пароль"
     }
   }
 }

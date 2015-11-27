@@ -6,16 +6,20 @@
   </div>
 
   <div class="sh-input-container" layout="column">
-    <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_PASSWORD"></label>
-    <a href="" class="login-form__forgot-link"></a>
+    <div layout="row">
+      <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_PASSWORD"></label>
+      <span flex></span>
+      <a href="" class="sh-link sh-label"><span translate-once="SH.LOGIN.TEXT_FORGOT_PASSWORD"></span>?</a>
+    </div>
     <input type="password" class="login-form__password sh-input-field" ng-model="vm.user.password"/>
   </div>
 
-  <div class="login-form__bottom" layout="row">
+  <div class="login-form__bottom md-body-1" layout="row" layout-align="start center">
     <div>
       <span translate-once="SH.LOGIN.TEXT_NEW"></span>?
-      <a href="" class="login-form__link-sign-up" translate-once="SH.LOGIN.TEXT_SIGN_UP"></a>
+      <a href="" class="login-form__sign-up-link sh-link" translate-once="SH.LOGIN.TEXT_SIGN_UP"></a>
     </div>
+    <span flex></span>
     <md-button class="sh-button sh-button--login" translate-once="SH.LOGIN.TEXT_LOG_IN"></md-button>
   </div>
 

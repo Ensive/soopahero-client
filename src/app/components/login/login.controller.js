@@ -2,7 +2,7 @@ export class LoginController {
   constructor () {
     'ngInject';
     this.user = {
-      name: '',
+      name: 'annamaria@gmail.com',
       password: ''
     };
   }

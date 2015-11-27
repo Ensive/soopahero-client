@@ -6,14 +6,19 @@
 @import ../assets/sass/mixins
 @import ../assets/sass/variables
 @import ../assets/sass/buttons
+@import ../assets/sass/links
+@import ../assets/sass/forms
+
+body
+  //overflow-x: hidden
+
+img
+  max-width: 100%
 
 .main-wrapper,
 .header,
 .footer
-  @include container
-
-img
-  max-width: 100%
+  @include sh-container
 
 .browsehappy
   margin: 0.2em 0
