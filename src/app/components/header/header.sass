@@ -1,6 +1,13 @@
 .header-wrapper,
 .header
-  height: 66px
+  min-height: 66px
 
 .header
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.07)
+
+  &__logo-link
+    @media only screen and (max-width: 599px)
+      margin: 10px 0 5px
+
+  &__actions
+    margin: 0 0 10px

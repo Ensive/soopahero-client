@@ -5,12 +5,14 @@
       <section>
         <h2 class="login-dialog__title" translate-once="SH.LOGIN.TITLE"></h2>
         <h3 class="login-dialog__subtitle" translate-once="SH.LOGIN.SUB_TITLE"></h3>
-        <ng-include src="'/app/components/login/login-form.html'"></ng-include>
+        <ng-include src="'app/components/login/login-form.html'"></ng-include>
         <!-- include facebook and twitter buttons -->
       </section>
     </div>
 
-    <div class="login-form-bg"></div>
+    <div class="login-form-bg" hide-sm hide-md>
+      <img class="login-form-bg__image" src="../../../assets/images/login-background.jpg" alt="">
+    </div>
 
   </md-dialog-content>
 </md-dialog>

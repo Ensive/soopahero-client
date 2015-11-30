@@ -1,13 +1,18 @@
 export class MainController {
-  constructor ($timeout, toastr) {
+  constructor ($timeout, toastr, loginService) {
     'ngInject';
 
+    this.loginService = loginService;
     this.awesomeThings = [];
     this.classAnimation = '';
     this.creationDate = 1448130894261;
     this.toastr = toastr;
 
     //this.activate($timeout, webDevTec);
+  }
+
+  openLoginForm(e) {
+    this.loginService.showLoginDialog(e);
   }
 
   activate($timeout, webDevTec) {

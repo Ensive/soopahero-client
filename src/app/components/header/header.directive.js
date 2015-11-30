@@ -4,7 +4,6 @@ export function HeaderDirective() {
   let directive = {
     restrict: 'E',
     templateUrl: 'app/components/header/header.html',
-    scope: {},
     controller: HeaderController,
     controllerAs: 'vm',
     bindToController: true,
@@ -15,14 +14,9 @@ export function HeaderDirective() {
 }
 
 class HeaderController {
-  constructor(loginService) {
+  constructor() {
     'ngInject';
-    this.loginService = loginService;
     this.isUserLoggedIn = false;
-  }
-
-  openLoginForm(e) {
-    this.loginService.showLoginDialog(e);
   }
 
 }

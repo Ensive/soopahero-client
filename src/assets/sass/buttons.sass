@@ -17,7 +17,8 @@ a.sh-button
     border: 1px solid transparent
     color: #fff
     margin-right: 5px
-    &:not([disabled]):hover
+    &:not([disabled]):hover,
+    &:not([disabled]):focus
       background-color: #ADC543
 
   &--signup
@@ -32,5 +33,6 @@ a.sh-button
     margin: 0
     color: #9D9D9D
     padding: 0 15px
+    display: inline
     &:not([disabled]):hover
       color: $sh-text
