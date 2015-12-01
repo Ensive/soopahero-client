@@ -1,8 +1,11 @@
-export function config($logProvider, $translateProvider, $mdThemingProvider, SH_CONSTANTS, tmhDynamicLocaleProvider) {
+export function config($logProvider, $resourceProvider, $translateProvider, $mdThemingProvider, SH_CONSTANTS, tmhDynamicLocaleProvider) {
   'ngInject';
 
   // Enable log
   $logProvider.debugEnabled(true);
+
+  // resource
+  $resourceProvider.defaults.stripTrailingSlashes = false;
 
   // set theme options
   $mdThemingProvider.theme('default')
