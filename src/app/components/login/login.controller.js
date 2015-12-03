@@ -1,9 +1,13 @@
 export class LoginController {
-  constructor () {
+  constructor (loginService) {
     'ngInject';
-    this.user = {
-      name: 'annamaria@gmail.com',
-      password: ''
-    };
+
+    this.loginService = loginService;
+    this.user = this.loginService.getUser();
   }
+
+  login(nickname, password) {
+    this.loginService.login(nickname, password);
+  }
+
 }

@@ -2,7 +2,7 @@
 
   <div class="sh-input-container" layout="column">
     <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_NAME"></label>
-    <input type="text" class="login-form__name sh-input-field" ng-model="vm.user.name"/>
+    <input type="text" class="login-form__name sh-input-field" ng-model="vm.user.nickname"/>
   </div>
 
   <div class="sh-input-container" layout="column">
@@ -20,7 +20,7 @@
       <a href="" class="login-form__sign-up-link sh-link" translate-once="SH.LOGIN.TEXT_SIGN_UP"></a>
     </div>
     <span flex></span>
-    <md-button class="sh-button sh-button--login" translate-once="SH.LOGIN.TEXT_LOG_IN" aria-label="Log in"></md-button>
+    <md-button ng-click="vm.login(vm.user.nickname, vm.user.password)" class="sh-button sh-button--login" translate-once="SH.LOGIN.TEXT_LOG_IN" aria-label="Log in"></md-button>
   </div>
 
 </form>
