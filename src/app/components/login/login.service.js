@@ -24,7 +24,7 @@ export class LoginService {
       password: password
     };
 
-    this.Login.save(angular.toJson(credentials), (data, getResponseHeaders) => {
+    this.Login.save(angular.toJson(credentials), (data) => {
       this.user.token = data.token;
     });
   }

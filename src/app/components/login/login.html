@@ -3,16 +3,16 @@
 
     <div class="login-form-wrapper">
       <section>
-        <h2 class="login-dialog__title" translate-once="SH.LOGIN.TITLE"></h2>
-        <h3 class="login-dialog__subtitle" translate-once="SH.LOGIN.SUB_TITLE"></h3>
+        <h2 class="login-dialog__title dialog-title">
+          <b class="block" translate-once="SH.LOGIN.TITLE"></b>
+          <span class="block" translate-once="SH.LOGIN.SUB_TITLE"></span>
+        </h2>
         <ng-include src="'app/components/login/login-form.html'"></ng-include>
         <!-- include facebook and twitter buttons -->
       </section>
     </div>
 
-    <div class="login-form-bg" hide-sm hide-md>
-      <img class="login-form-bg__image" src="../../../assets/images/login-background.jpg" alt="">
-    </div>
+    <dialog-bg image-src="../../../assets/images/login-background.jpg"></dialog-bg>
 
   </md-dialog-content>
 </md-dialog>

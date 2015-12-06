@@ -20,6 +20,10 @@
       "TEXT_LOG_IN": "@:SH.HEADER.LOG_IN",
       "TEXT_SIGN_UP": "@:SH.HEADER.SIGN_UP",
       "TEXT_FORGOT_PASSWORD": "Forgot password"
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Forgot your password",
+      "SUB_TITLE": "Type in your email, and we'll send you further instructions"
     }
   }
 }

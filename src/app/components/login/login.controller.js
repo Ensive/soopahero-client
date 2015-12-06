@@ -1,5 +1,5 @@
 export class LoginController {
-  constructor (loginService) {
+  constructor(loginService) {
     'ngInject';
 
     this.loginService = loginService;
