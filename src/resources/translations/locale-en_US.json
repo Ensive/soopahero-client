@@ -27,6 +27,10 @@
       "EMAIL": "Your email address",
       "SEND_INSTRUCTIONS": "Send instructions",
       "CANCEL": "Cancel"
+    },
+    "SIGN_UP": {
+      "TITLE": "@:SH.HEADER_SIGN_UP",
+      "SUB_TITLE": "to make the world better"
     }
   }
 }

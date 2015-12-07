@@ -9,7 +9,7 @@
     <!-- if user not logged in -->
     <div class="header__actions" ng-if="!vm.isUserLoggedIn">
       <md-button ng-click="main.openLoginForm($event)" href="" class="sh-button sh-button--login">{{ 'SH.HEADER.LOG_IN' | translate }}</md-button>
-      <md-button ng-click="" href="" class="sh-button sh-button--signup">{{ 'SH.HEADER.SIGN_UP' | translate }}</md-button>
+      <md-button ng-click="main.openSignUpForm($event)" href="" class="sh-button sh-button--signup">{{ 'SH.HEADER.SIGN_UP' | translate }}</md-button>
     </div>
     <!-- if user logged in -->
     <!-- ... -->

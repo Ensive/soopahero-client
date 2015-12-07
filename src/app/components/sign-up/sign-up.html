@@ -1,0 +1,19 @@
+<md-dialog aria-label="Sign Up">
+  <md-dialog-content class="sign-up-dialog sh-dialog">
+
+    <div class="sh-dialog-wrapper">
+      <section>
+        <h2 class="sign-up-dialog__title sh-dialog-title">
+          <b class="block" translate-once="SH.SIGN_UP.TITLE"></b>
+          <span class="block" translate-once="SH.SIGN_UP.SUB_TITLE"></span>
+        </h2>
+        <ng-include src="'app/components/sign-up/sign-up-form.html'"></ng-include>
+        <!-- include facebook and twitter buttons -->
+      </section>
+    </div>
+
+    <sh-dialog-bg image-src="assets/images/sign-up-background.jpg"></sh-dialog-bg>
+    <sh-dialog-close></sh-dialog-close>
+
+  </md-dialog-content>
+</md-dialog>
