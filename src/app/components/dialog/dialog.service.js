@@ -13,7 +13,10 @@ export class DialogService {
       templateUrl: config.templateUrl,
       parent: angular.element(this.$document[0].body),
       targetEvent: e,
-      clickOutsideToClose: true
+      clickOutsideToClose: true,
+      onComplete: (scope, element) => {
+        element[0].querySelector('input').focus();
+      }
     });
     //.then(this.openLoginFormSuccess, this.openLoginFormFail);
   }

@@ -4,4 +4,8 @@ export class ForgotPasswordController {
 
     this.loginService = loginService;
   }
+
+  closeDialog() {
+    this.loginService.closeDialog();
+  }
 }
