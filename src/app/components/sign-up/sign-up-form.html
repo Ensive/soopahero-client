@@ -1,0 +1,29 @@
+<form class="sign-up-form sh-form" layout="column">
+
+  <div class="sh-input-container" layout="column">
+    <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_USERNAME"></label>
+    <input type="text" class="sh-input-field" ng-model="vm.user.nickname">
+  </div>
+  <div class="sh-input-container" layout="column">
+    <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_EMAIL"></label>
+    <input type="email" class="sh-input-field" ng-model="vm.user.email">
+  </div>
+
+  <div class="sh-input-container" layout="column">
+    <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_PASSWORD"></label>
+    <input type="password" class="sh-input-field" ng-model="vm.user.password">
+  </div>
+
+  <div class="sh-input-container sh-text md-body-1" layout="row" layout-sm="column" layout-align="start center">
+    <div flex-order-sm="3" flex-sm="100">
+      <span translate-once="SH.SIGN_UP.HAVE_AN_ACCOUNT"></span>?
+      <a href="" ng-click="vm.showLoginDialog($event)" class="sign-up-form__login-link sh-link" translate-once="SH.SIGN_UP.LOG_IN"></a>
+    </div>
+    <span flex flex-order-sm="2"></span>
+    <md-button class="sh-button sh-button--login"
+               translate-once="SH.SIGN_UP.SIGN_UP"
+               aria-label="Sign up"
+               flex-sm="100" flex-order-sm="1"></md-button>
+  </div>
+
+</form>

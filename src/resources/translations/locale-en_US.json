@@ -29,8 +29,14 @@
       "CANCEL": "Cancel"
     },
     "SIGN_UP": {
-      "TITLE": "@:SH.HEADER_SIGN_UP",
-      "SUB_TITLE": "to make the world better"
+      "TITLE": "@:SH.HEADER.SIGN_UP",
+      "SUB_TITLE": "to make the world better",
+      "LABEL_USERNAME": "Username",
+      "LABEL_EMAIL": "Email",
+      "LABEL_PASSWORD": "@:SH.LOGIN.LABEL_PASSWORD",
+      "HAVE_AN_ACCOUNT": "Have an account",
+      "LOG_IN": "@:SH.HEADER.LOG_IN",
+      "SIGN_UP": "@:SH.HEADER.SIGN_UP"
     }
   }
 }

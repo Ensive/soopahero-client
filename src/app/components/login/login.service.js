@@ -8,7 +8,8 @@ export class LoginService {
     this.apiUrl = `${SH_CONSTANTS.PROTOCOL}://${SH_CONSTANTS.DOMAIN}/api/`;
     this.Login = this.resource(`${this.apiUrl}login`);
     this.user = {
-      nickname: 'superman@soopahero.com',
+      nickname: undefined,
+      email: undefined,
       password: undefined,
       token: undefined
     };

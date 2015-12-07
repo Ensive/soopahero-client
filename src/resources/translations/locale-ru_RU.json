@@ -30,7 +30,13 @@
     },
     "SIGN_UP": {
       "TITLE": "Зарегистрироваться",
-      "SUB_TITLE": "чтобы сделать мир лучше"
+      "SUB_TITLE": "чтобы сделать мир лучше",
+      "LABEL_USERNAME": "Никнейм",
+      "LABEL_EMAIL": "Email",
+      "LABEL_PASSWORD": "@:SH.LOGIN.LABEL_PASSWORD",
+      "HAVE_AN_ACCOUNT": "Уже есть аккаунт",
+      "LOG_IN": "@:SH.HEADER.LOG_IN",
+      "SIGN_UP": "@:SH.HEADER.SIGN_UP"
     }
   }
 }
