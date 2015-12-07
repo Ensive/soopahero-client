@@ -1,28 +1,5 @@
 <sh-header ng-cloak></sh-header>
 
-<div class="main-wrapper">
-
-  <div class="jumbotron">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p class="animated infinite" ng-class="main.classAnimation">
-      <a class="btn btn-lg btn-success">Splendid Toastr</a>
-    </p>
-  </div>
-
-  <div class="col" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-    <div class="thumbnail">
-      <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-      <div class="caption">
-        <h3>{{ awesomeThing.title }}</h3>
-        <p>{{ awesomeThing.description }}</p>
-        <p><a ng-href="{{ awesomeThing.url }}">{{ awesomeThing.url }}</a></p>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="main-wrapper"></div>
 
 <sh-footer ng-cloak></sh-footer>
