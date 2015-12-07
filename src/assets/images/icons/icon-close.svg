@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="12px" viewBox="0 0 13 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15857) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="login" sketch:type="MSArtboardGroup" transform="translate(-1024.000000, -105.000000)" fill="#B2B7C4">
+            <g id="settings" sketch:type="MSLayerGroup" transform="translate(286.000000, 93.000000)">
+                <g id="close" transform="translate(726.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <g transform="translate(12.000000, 11.000000)">
+                        <rect id="Rectangle-95" transform="translate(6.500000, 7.000000) rotate(-45.000000) translate(-6.500000, -7.000000) " x="6" y="-1" width="1" height="16"></rect>
+                        <rect id="Rectangle-95-Copy" transform="translate(6.500000, 7.000000) scale(-1, 1) rotate(-45.000000) translate(-6.500000, -7.000000) " x="6" y="-1" width="1" height="16"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

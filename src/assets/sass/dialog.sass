@@ -1,17 +1,56 @@
 md-dialog
   border-radius: 6px
   background: #FFFFFF
+  overflow: visible
   // @todo: consider the usage
   //border: 1px solid #CED1D8
 
-.dialog-title
-  color: $sh-text
-  font-size: 18px
-  font-weight: normal
-  line-height: 21px
+// overwrite fab button styles
+.md-button.sh-dialog-close
+  background-color: #fff
+  height: 36px
+  line-height: 36px
   margin: 0
+  width: 36px
+  &:not([disabled]):hover,
+  &:not([disabled]):focus
+    background-color: darken(#fff, 10%)
+  md-icon
+    width: 16px
+    height: 16px
 
-.dialog-bg
-  width: 43.098591549296%
-  &__image
-    display: block
+.sh-dialog
+  position: relative
+  max-width: 710px
+  overflow: visible
+  // @todo: consider the usage
+  //box-shadow: 0 0 3px 0 rgba(126, 126, 126, 0.50)
+
+  &-close
+    position: absolute
+    top: 0
+    right: -51px
+
+  &-title
+    color: $sh-text
+    font-size: 18px
+    font-weight: normal
+    line-height: 21px
+    margin: 0
+
+  &-bg
+    width: 43.098591549296%
+    border-top-right-radius: 6px
+    border-bottom-right-radius: 6px
+    overflow: hidden
+    &__image
+      display: block
+
+  &-form-wrapper
+    width: 56.901408450704%
+    padding: 40px 65px 44px 69px
+    @media only screen and (max-width: 959px)
+      width: 100%
+      padding: 25px 30px
+    @media only screen and (max-width: 400px)
+      padding: 20px 20px

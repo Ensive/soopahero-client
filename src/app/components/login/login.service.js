@@ -15,7 +15,19 @@ export class LoginService {
   }
 
   showLoginDialog(e) {
-    this.dialogService.showAdvancedDialog(e);
+    let dialogConfig = {
+      controller: 'LoginController',
+      templateUrl: 'app/components/login/login.html'
+    };
+    this.dialogService.showAdvancedDialog(e, dialogConfig);
+  }
+
+  showForgotPasswordDialog(e) {
+    let dialogConfig = {
+      controller: 'ForgotPasswordController',
+      templateUrl: 'app/components/login/forgot-password/forgot-password.html'
+    };
+    this.dialogService.showAdvancedDialog(e, dialogConfig);
   }
 
   login(nickname, password) {
@@ -27,6 +39,10 @@ export class LoginService {
     this.Login.save(angular.toJson(credentials), (data) => {
       this.user.token = data.token;
     });
+  }
+
+  closeDialog() {
+    this.dialogService.hideDialog();
   }
 
   getUser() {

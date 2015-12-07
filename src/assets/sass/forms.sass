@@ -1,6 +1,7 @@
 .sh-input
 
   &-container
+    margin: 0 0 11px 0
 
   &-field
     border: 1px solid #E5E5E5
@@ -11,7 +12,11 @@
     padding: 0 14px
     width: 270px
     line-height: 16px
+    @media only screen and (max-width: 959px)
+      min-width: 270px
+      width: 100%
     @media only screen and (max-width: 599px)
+      min-width: 100%
       width: 100%
 
 

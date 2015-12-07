@@ -23,7 +23,10 @@
     },
     "FORGOT_PASSWORD": {
       "TITLE": "Forgot your password",
-      "SUB_TITLE": "Type in your email, and we'll send you further instructions"
+      "SUB_TITLE": "Type in your email, and we'll send you further instructions",
+      "EMAIL": "Your email address",
+      "SEND_INSTRUCTIONS": "Send instructions",
+      "CANCEL": "Cancel"
     }
   }
 }

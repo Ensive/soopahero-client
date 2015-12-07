@@ -9,7 +9,7 @@
     <div layout="row">
       <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_PASSWORD"></label>
       <span flex></span>
-      <a href="" class="sh-link sh-label"><span translate-once="SH.LOGIN.TEXT_FORGOT_PASSWORD"></span>?</a>
+      <a href="" ng-click="vm.showForgotPasswordDialog($event)" class="sh-link sh-label" role="button"><span translate-once="SH.LOGIN.TEXT_FORGOT_PASSWORD"></span>?</a>
     </div>
     <input type="password" class="login-form__password sh-input-field" ng-model="vm.user.password"/>
   </div>

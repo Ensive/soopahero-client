@@ -6,11 +6,11 @@ export class DialogService {
     this.$document = $document;
   }
 
-  showAdvancedDialog(e) {
+  showAdvancedDialog(e, config) {
     return this.$mdDialog.show({
-      controller: 'LoginController',
+      controller: config.controller,
       controllerAs: 'vm',
-      templateUrl: 'app/components/login/login.html',
+      templateUrl: config.templateUrl,
       parent: angular.element(this.$document[0].body),
       targetEvent: e,
       clickOutsideToClose: true
@@ -20,6 +20,8 @@ export class DialogService {
 
   //showConfirmationDialog() {}
   //showAlertDialog() {}
-  //hideDialog() {}
+  hideDialog() {
+    this.$mdDialog.hide();
+  }
 
 }

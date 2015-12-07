@@ -9,19 +9,29 @@ a.sh-button
     border-radius: 40px
 
   &--login,
-  &--signup
+  &--signup,
+  &--cancel,
+  &--fp
     margin: 0
 
-  &--login
+  &--login,
+  &--fp
     background-color: $sh-green
     border: 1px solid transparent
     color: #fff
-    margin-right: 5px
     &:not([disabled]):hover,
     &:not([disabled]):focus
       background-color: #ADC543
 
-  &--signup
+  &--login
+    margin-right: 5px
+
+  &--fp
+    @media only screen and (max-width: 599px)
+      margin: 0 0 5px 0
+
+  &--signup,
+  &--cancel
     border: 1px solid #C0C0C0
     color: #9D9D9D
     &:not([disabled]):hover

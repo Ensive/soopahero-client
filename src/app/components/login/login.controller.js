@@ -10,4 +10,12 @@ export class LoginController {
     this.loginService.login(nickname, password);
   }
 
+  showForgotPasswordDialog(e) {
+    this.loginService.showForgotPasswordDialog(e);
+  }
+
+  closeDialog() {
+    this.loginService.closeDialog();
+  }
+
 }

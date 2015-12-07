@@ -1,9 +1,9 @@
 <md-dialog aria-label="Log in">
-  <md-dialog-content class="login-dialog" layout="row">
+  <md-dialog-content class="login-dialog sh-dialog" layout="row">
 
-    <div class="login-form-wrapper">
+    <div class="sh-dialog-form-wrapper">
       <section>
-        <h2 class="login-dialog__title dialog-title">
+        <h2 class="login-dialog__title sh-dialog-title">
           <b class="block" translate-once="SH.LOGIN.TITLE"></b>
           <span class="block" translate-once="SH.LOGIN.SUB_TITLE"></span>
         </h2>
@@ -12,7 +12,10 @@
       </section>
     </div>
 
-    <dialog-bg image-src="../../../assets/images/login-background.jpg"></dialog-bg>
+    <dialog-bg image-src="assets/images/login-background.jpg"></dialog-bg>
+    <md-button ng-click="vm.closeDialog()" class="md-fab sh-dialog-close" aria-label="Close dialog">
+      <md-icon md-svg-src="assets/images/icons/icon-close.svg"></md-icon>
+    </md-button>
 
   </md-dialog-content>
 </md-dialog>
