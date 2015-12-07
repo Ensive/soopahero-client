@@ -10,6 +10,7 @@ import { ForgotPasswordController } from '../app/components/login/forgot-passwor
 //import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { HeaderDirective } from '../app/components/header/header.directive';
 import { DialogBgDirective } from '../app/components/dialog/dialog-bg.directive';
+import { DialogCloseDirective } from '../app/components/dialog/dialog-close.directive';
 import { DialogService } from '../app/components/dialog/dialog.service';
 import { LoginService } from '../app/components/login/login.service';
 import { FooterDirective } from '../app/components/footer/footer.directive';
@@ -43,4 +44,5 @@ angular.module('soopaheroClient',
   .service('loginService', LoginService)
   .directive('shHeader', HeaderDirective)
   .directive('shFooter', FooterDirective)
-  .directive('dialogBg', DialogBgDirective);
+  .directive('shDialogClose', DialogCloseDirective)
+  .directive('shDialogBg', DialogBgDirective);

@@ -1,7 +1,7 @@
 export function HeaderDirective() {
   'njInject';
 
-  let directive = {
+  return {
     restrict: 'E',
     templateUrl: 'app/components/header/header.html',
     controller: HeaderController,
@@ -9,8 +9,6 @@ export function HeaderDirective() {
     bindToController: true,
     replace: true
   };
-
-  return directive;
 }
 
 class HeaderController {

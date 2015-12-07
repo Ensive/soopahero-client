@@ -1,14 +1,15 @@
 export function DialogBgDirective() {
   'ngInject';
 
-  let directive = {
+  return {
     restrict: 'E',
-    templateUrl: 'app/components/dialog/dialog-bg.html',
+    template: `
+    <div class="sh-dialog-bg" hide-sm hide-md>
+      <img class="sh-dialog-bg__image" ng-src="{{ imageSrc }}" alt="Background image" />
+    </div>`,
     scope: {
       imageSrc: '@'
     },
     replace: true
   };
-
-  return directive;
 }
