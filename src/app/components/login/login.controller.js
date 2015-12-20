@@ -6,8 +6,9 @@ export class LoginController {
     this.user = this.loginService.getUser();
   }
 
-  login(nickname, password) {
-    this.loginService.login(nickname, password);
+  login(user) {
+    // @todo: remove undefined properties (here or in service ?)
+    this.loginService.login(user);
   }
 
   showForgotPasswordDialog(e) {

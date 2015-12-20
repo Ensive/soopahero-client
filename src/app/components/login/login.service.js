@@ -31,15 +31,24 @@ export class LoginService {
     this.dialogService.showAdvancedDialog(e, dialogConfig);
   }
 
-  login(nickname, password) {
+  login(user) {
+    // @todo: check if Email
+    // @todo: extend with email or login property and then send
+
+    //if (this.isEmail(user.))
     let credentials = {
-      email: nickname,
-      password: password
+      email: user.nickname,
+      password: user.password
     };
 
     this.Login.save(angular.toJson(credentials), (data) => {
       this.user.token = data.token;
     });
+  }
+
+  isEmail(string) {
+    let re = /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm;
+    return re.test(string);
   }
 
   closeDialog() {
