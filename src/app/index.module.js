@@ -4,6 +4,7 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { constants } from './index.constants';
 import { runBlock } from './index.run';
+import { lodashFactory } from '../app/utils/lodash.factory';
 import { MainController } from './main/main.controller';
 import { LoginController } from '../app/components/login/login.controller';
 import { SignUpController } from '../app/components/sign-up/sign-up.controller';
@@ -35,6 +36,7 @@ angular.module('soopaheroClient',
   .config(routerConfig)
   .constant('SH_CONSTANTS', constants)
   .run(runBlock)
+  .factory('_', lodashFactory)
   .controller('MainController', MainController)
   .controller('LoginController', LoginController)
   .controller('SignUpController', SignUpController)
