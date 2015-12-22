@@ -2,8 +2,6 @@ md-dialog
   border-radius: 6px
   background: #FFFFFF
   overflow: visible
-  // @todo: consider the usage
-  //border: 1px solid #CED1D8
 
 // overwrite fab button styles
 .md-button.sh-dialog-close
@@ -21,18 +19,16 @@ md-dialog
 
 .sh-dialog
   position: relative
-  max-width: 710px
   overflow: visible
-  // @todo: consider the usage
-  //box-shadow: 0 0 3px 0 rgba(126, 126, 126, 0.50)
 
   &-close
     position: absolute
     top: 0
     right: -51px
-    @media only screen and (max-width: 599px)
-      top: -51px
-      right: 0
+    @media only screen and (max-width: 959px)
+      top: 3px
+      right: 3px
+      box-shadow: none !important
 
   &-title
     color: $sh-text
@@ -54,6 +50,6 @@ md-dialog
     padding: 40px 65px 44px 69px
     @media only screen and (max-width: 959px)
       width: 100%
+      max-width: 500px
+      margin: 0 auto
       padding: 25px 30px
-    @media only screen and (max-width: 400px)
-      padding: 20px 20px
