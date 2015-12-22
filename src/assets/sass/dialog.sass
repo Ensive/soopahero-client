@@ -19,7 +19,10 @@ md-dialog
 
 .sh-dialog
   position: relative
+  max-width: 710px
   overflow: visible
+  @media only screen and (max-width: 959px)
+    max-width: 100%
 
   &-close
     position: absolute
@@ -53,3 +56,5 @@ md-dialog
       max-width: 500px
       margin: 0 auto
       padding: 25px 30px
+    @media only screen and (max-width: 599px)
+      padding: 20px
