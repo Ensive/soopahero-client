@@ -2,25 +2,25 @@
 
   <div class="sh-input-container" layout="column">
     <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_NAME"></label>
-    <input type="text" class="login-form__name sh-input-field" ng-model="vm.user.nickname"/>
+    <input type="text" class="login-form__name sh-input-field" ng-model="vm.user.nickname" tabindex="10"/>
   </div>
 
   <div class="sh-input-container" layout="column">
     <div layout="row">
       <label class="login-form__label sh-label" translate-once="SH.LOGIN.LABEL_PASSWORD"></label>
       <span flex></span>
-      <a href="" ng-click="vm.showForgotPasswordDialog($event)" class="sh-link sh-label" role="button" tabindex="-1"><span translate-once="SH.LOGIN.TEXT_FORGOT_PASSWORD"></span>?</a>
+      <a href="" ng-click="vm.showForgotPasswordDialog($event)" class="sh-link sh-label" role="button" tabindex="20"><span translate-once="SH.LOGIN.TEXT_FORGOT_PASSWORD"></span>?</a>
     </div>
-    <input type="password" class="login-form__password sh-input-field" ng-model="vm.user.password"/>
+    <input type="password" class="login-form__password sh-input-field" ng-model="vm.user.password" tabindex="10"/>
   </div>
 
   <div class="sh-input-container sh-text md-body-1" layout="row" layout-align="start center">
     <div>
       <span translate-once="SH.LOGIN.TEXT_NEW"></span>?
-      <a href="" class="login-form__sign-up-link sh-link" translate-once="SH.LOGIN.TEXT_SIGN_UP" tabindex="-1"></a>
+      <a href="" class="login-form__sign-up-link sh-link" translate-once="SH.LOGIN.TEXT_SIGN_UP" tabindex="20"></a>
     </div>
     <span flex></span>
-    <md-button ng-click="vm.login(vm.user)" class="sh-button sh-button--login" translate-once="SH.LOGIN.TEXT_LOG_IN" aria-label="Log in"></md-button>
+    <md-button ng-click="vm.login(vm.user)" class="sh-button sh-button--login" translate-once="SH.LOGIN.TEXT_LOG_IN" aria-label="Log in" tabindex="10"></md-button>
   </div>
 
 </form>
