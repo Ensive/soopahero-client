@@ -7,7 +7,6 @@ export class LoginController {
   }
 
   login(user) {
-    // @todo: remove undefined properties (here or in service ?)
     this.loginService.login(user);
   }
 

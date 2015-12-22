@@ -1,8 +1,10 @@
 export class LoginService {
-  constructor($resource, _, SH_CONSTANTS, helperService, dialogService) {
+  constructor($rootScope, $resource, $state, SH_CONSTANTS, helperService, dialogService) {
     'ngInject';
 
+    this.rootScope = $rootScope;
     this.resource = $resource;
+    this.state = $state;
     this.dialogService = dialogService;
     this.helperService = helperService;
 
@@ -33,17 +35,22 @@ export class LoginService {
   }
 
   login(user) {
-    // @todo: check if Email
-    // @todo: extend with email or login property and then send
+    let isEmail = this.helperService.isEmail;
+    let credentials = {};
 
-    //if (this.isEmail(user.))
-    let credentials = {
-      email: user.nickname,
-      password: user.password
-    };
+    if (isEmail(user.nickname)) {
+      credentials.email = user.nickname;
+    } else {
+      credentials.login = user.nickname;
+    }
+
+    credentials.password = user.password;
 
     this.Login.save(angular.toJson(credentials), (data) => {
-      this.user.token = data.token;
+      this.user.token = data.token ? data.token : null;
+      this.rootScope.home = '#/dashboard';
+      this.dialogService.hideDialog();
+      this.state.go('dashboard');
     });
   }
 
