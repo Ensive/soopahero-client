@@ -13,6 +13,7 @@ import { PostsController } from '../app/posts/posts.controller.js'
 import { HeaderDirective } from '../app/components/header/header.directive';
 import { DialogBgDirective } from '../app/components/dialog/dialog-bg.directive';
 import { DialogCloseDirective } from '../app/components/dialog/dialog-close.directive';
+import { HelperService } from '../app/utils/helper.service';
 import { DialogService } from '../app/components/dialog/dialog.service';
 import { LoginService } from '../app/components/login/login.service';
 import { SignUpService } from '../app/components/sign-up/sign-up.service';
@@ -42,6 +43,7 @@ angular.module('soopaheroClient',
   .controller('SignUpController', SignUpController)
   .controller('ForgotPasswordController', ForgotPasswordController)
   .controller('PostsController', PostsController)
+  .service('helperService', HelperService)
   .service('dialogService', DialogService)
   .service('loginService', LoginService)
   .service('signUpService', SignUpService)

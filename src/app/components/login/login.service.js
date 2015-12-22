@@ -1,9 +1,10 @@
 export class LoginService {
-  constructor($resource, SH_CONSTANTS, dialogService) {
+  constructor($resource, _, SH_CONSTANTS, helperService, dialogService) {
     'ngInject';
 
     this.resource = $resource;
     this.dialogService = dialogService;
+    this.helperService = helperService;
 
     this.apiUrl = `${SH_CONSTANTS.PROTOCOL}://${SH_CONSTANTS.DOMAIN}/api/`;
     this.Login = this.resource(`${this.apiUrl}login`);
@@ -44,11 +45,6 @@ export class LoginService {
     this.Login.save(angular.toJson(credentials), (data) => {
       this.user.token = data.token;
     });
-  }
-
-  isEmail(string) {
-    let re = /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm;
-    return re.test(string);
   }
 
   closeDialog() {
