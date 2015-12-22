@@ -22,7 +22,6 @@ import { FooterDirective } from '../app/components/footer/footer.directive';
 angular.module('soopaheroClient',
   ['ngAnimate',
     'ngCookies',
-    'ngTouch',
     'ngSanitize',
     'ngMessages',
     'ngAria',

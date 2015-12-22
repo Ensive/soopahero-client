@@ -4,7 +4,6 @@
   "dependencies": {
     "angular-animate": "~1.4.2",
     "angular-cookies": "~1.4.2",
-    "angular-touch": "~1.4.2",
     "angular-sanitize": "~1.4.2",
     "angular-messages": "~1.4.2",
     "angular-aria": "~1.4.2",
@@ -21,7 +20,7 @@
     "angular-translate-handler-log": "~2.8.1",
     "angular-i18n": "~1.4.8",
     "angular-dynamic-locale": "~0.1.28",
-    "angular-material": "~0.11.4",
+    "angular-material": "~1.0.1",
     "angular-translate-once": "~1.0.3",
     "js-sha256": "~0.3.0",
     "lodash": "~3.10.1"
