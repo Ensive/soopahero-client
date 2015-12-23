@@ -5,6 +5,10 @@ export class SignUpService {
     this.dialogService = dialogService;
   }
 
+  register() {
+
+  }
+
   showSignUpDialog(e) {
     let dialogConfig = {
       controller: 'SignUpController',
