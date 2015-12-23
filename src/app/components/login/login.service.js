@@ -1,7 +1,8 @@
 export class LoginService {
-  constructor($rootScope, $resource, $state, SH_CONSTANTS, helperService, dialogService) {
+  constructor(_, $rootScope, $resource, $state, SH_CONSTANTS, helperService, dialogService) {
     'ngInject';
 
+    this._ = _;
     this.rootScope = $rootScope;
     this.resource = $resource;
     this.state = $state;
@@ -46,12 +47,7 @@ export class LoginService {
 
     credentials.password = user.password;
 
-    this.Login.save(angular.toJson(credentials), (data) => {
-      this.user.token = data.token ? data.token : null;
-      this.rootScope.home = '#/dashboard';
-      this.dialogService.hideDialog();
-      this.state.go('dashboard');
-    });
+    this.Login.save(angular.toJson(credentials), _loginSuccess.bind(this), _loginError.bind(this));
   }
 
   closeDialog() {
@@ -62,4 +58,21 @@ export class LoginService {
     return this.user;
   }
 
+  clearUser() {
+    if (arguments.length == 0) return;
+    this._.times(arguments.length, (n) => this.user[arguments[n]] = null);
+  }
+
+}
+
+// private
+function _loginSuccess(data) {
+  this.user.token = data.token ? data.token : null;
+  this.rootScope.home = '#/dashboard';
+  this.dialogService.hideDialog();
+  this.state.go('dashboard');
+}
+
+function _loginError() {
+  this.clearUser('password', 'token');
 }
