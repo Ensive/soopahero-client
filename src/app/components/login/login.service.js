@@ -19,6 +19,33 @@ export class LoginService {
     };
   }
 
+  login(user) {
+    let isEmail = this.helperService.isEmail;
+    let credentials = {};
+
+    if (isEmail(user.nickname)) {
+      credentials.email = user.nickname;
+    } else {
+      credentials.login = user.nickname;
+    }
+
+    credentials.password = user.password;
+
+    this.Login.save(angular.toJson(credentials), _loginSuccess.bind(this), _loginError.bind(this));
+  }
+
+  getUser() {
+    return this.user;
+  }
+
+  clearUser() {
+    if (arguments.length == 0) {
+      this._.each(this.user, (value, key, obj) => obj[key] = null);
+    } else {
+      this._.times(arguments.length, (n) => this.user[arguments[n]] = null);
+    }
+  }
+
   showLoginDialog(e) {
     let dialogConfig = {
       controller: 'LoginController',
@@ -35,37 +62,9 @@ export class LoginService {
     this.dialogService.showAdvancedDialog(e, dialogConfig);
   }
 
-  login(user) {
-    let isEmail = this.helperService.isEmail;
-    let credentials = {};
-
-    if (isEmail(user.nickname)) {
-      credentials.email = user.nickname;
-    } else {
-      credentials.login = user.nickname;
-    }
-
-    credentials.password = user.password;
-
-    this.Login.save(angular.toJson(credentials), _loginSuccess.bind(this), _loginError.bind(this));
-  }
-
   closeDialog() {
     this.dialogService.hideDialog();
   }
-
-  getUser() {
-    return this.user;
-  }
-
-  clearUser() {
-    if (arguments.length == 0) {
-      this._.each(this.user, (value, key, obj) => obj[key] = null);
-    } else {
-      this._.times(arguments.length, (n) => this.user[arguments[n]] = null);
-    }
-  }
-
 }
 
 // private
