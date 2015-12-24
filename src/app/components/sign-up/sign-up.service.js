@@ -1,8 +1,11 @@
 export class SignUpService {
-  constructor($resource, helperService, dialogService) {
+  constructor(_, $resource, helperService, dialogService, loginService) {
     'ngInject';
 
+    this._ = _;
     this.dialogService = dialogService;
+    this.loginService = loginService;
+    this.user = this.loginService.getUser();
     this.newUser = {
       nickname: null,
       email: null,
@@ -29,10 +32,15 @@ export class SignUpService {
   }
 }
 
-function _registerSuccess() {
-
+function _registerSuccess(data, headers) {
+  this.user.token = data.token ? data.token : null;
+  this.user = this._.merge(this.user, this.newUser);
+  this.dialogService.hideDialog();
+  // @todo: spinning; show loginDialog; confirm email message
 }
 
-function _registerError() {
-
+function _registerError(error) {
+  // @todo: show error messages depending on the status code
+  if (error.status == 409) {}
+  if (error.status == 400) {}
 }

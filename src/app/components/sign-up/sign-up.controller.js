@@ -8,7 +8,7 @@ export class SignUpController {
   }
 
   register() {
-    this.signUpService.register(this.user)
+    this.signUpService.register(this.user);
   }
 
   closeDialog() {
