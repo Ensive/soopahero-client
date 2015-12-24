@@ -6,8 +6,8 @@ export class LoginController {
     this.user = this.loginService.getUser();
   }
 
-  login(user) {
-    this.loginService.login(user);
+  login() {
+    this.loginService.login(this.user);
   }
 
   showForgotPasswordDialog(e) {

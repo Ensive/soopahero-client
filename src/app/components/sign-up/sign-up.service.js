@@ -3,6 +3,11 @@ export class SignUpService {
     'ngInject';
 
     this.dialogService = dialogService;
+    this.newUser = {
+      nickname: null,
+      email: null,
+      password: null
+    };
   }
 
   register() {
@@ -15,5 +20,9 @@ export class SignUpService {
       templateUrl: 'app/components/sign-up/sign-up.html'
     };
     this.dialogService.showAdvancedDialog(e, dialogConfig);
+  }
+
+  getUser() {
+    return this.newUser;
   }
 }

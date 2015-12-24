@@ -4,11 +4,11 @@ export class SignUpController {
 
     this.loginService = loginService;
     this.signUpService = signUpService;
-    this.user = this.loginService.getUser();
+    this.user = this.signUpService.getUser();
   }
 
-  register(user) {
-    this.signUpService.register(user)
+  register() {
+    this.signUpService.register(this.user)
   }
 
   closeDialog() {

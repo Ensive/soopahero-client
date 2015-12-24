@@ -59,8 +59,11 @@ export class LoginService {
   }
 
   clearUser() {
-    if (arguments.length == 0) return;
-    this._.times(arguments.length, (n) => this.user[arguments[n]] = null);
+    if (arguments.length == 0) {
+      this._.each(this.user, (value, key, obj) => obj[key] = null);
+    } else {
+      this._.times(arguments.length, (n) => this.user[arguments[n]] = null);
+    }
   }
 
 }
