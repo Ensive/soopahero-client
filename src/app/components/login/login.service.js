@@ -1,16 +1,14 @@
 export class LoginService {
-  constructor(_, $rootScope, $resource, $state, SH_CONSTANTS, helperService, dialogService) {
+  constructor(_, $rootScope, $resource, $state, helperService, dialogService) {
     'ngInject';
 
     this._ = _;
     this.rootScope = $rootScope;
-    this.resource = $resource;
     this.state = $state;
     this.dialogService = dialogService;
     this.helperService = helperService;
 
-    this.apiUrl = `${SH_CONSTANTS.PROTOCOL}://${SH_CONSTANTS.DOMAIN}/api/`;
-    this.Login = this.resource(`${this.apiUrl}login`);
+    this.Login = $resource(helperService.getApiUrl('login'));
     this.user = {
       nickname: undefined,
       email: undefined,

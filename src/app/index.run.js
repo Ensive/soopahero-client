@@ -1,4 +1,4 @@
-export function runBlock ($rootScope, _, $log) {
+export function runBlock (_, encrypt, $rootScope, $log) {
   'ngInject';
   $rootScope.home = '/';
   $log.debug('runBlock end');

@@ -1,5 +1,5 @@
 export class SignUpService {
-  constructor(dialogService) {
+  constructor($resource, helperService, dialogService) {
     'ngInject';
 
     this.dialogService = dialogService;
@@ -8,10 +8,12 @@ export class SignUpService {
       email: null,
       password: null
     };
+
+    this.Register = $resource(helperService.getApiUrl('heroes'));
   }
 
-  register() {
-
+  register(user) {
+    this.Register.save(angular.toJson(user), _registerSuccess.bind(this), _registerError.bind(this))
   }
 
   getUser() {
@@ -25,4 +27,12 @@ export class SignUpService {
     };
     this.dialogService.showAdvancedDialog(e, dialogConfig);
   }
+}
+
+function _registerSuccess() {
+
+}
+
+function _registerError() {
+
 }

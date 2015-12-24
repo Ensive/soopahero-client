@@ -5,7 +5,8 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { constants } from './index.constants';
 import { runBlock } from './index.run';
-import { lodashFactory } from '../app/utils/lodash.factory';
+import { lodashFactory } from '../app/components/utils/lodash.factory';
+import { encryptFactory } from '../app/components/utils/encrypt.factory';
 
 // controllers
 import { MainController } from './main/main.controller';
@@ -15,7 +16,7 @@ import { ForgotPasswordController } from '../app/components/login/forgot-passwor
 import { PostsController } from '../app/posts/posts.controller.js'
 
 // services
-import { HelperService } from '../app/utils/helper.service';
+import { HelperService } from '../app/components/utils/helper.service';
 import { DialogService } from '../app/components/dialog/dialog.service';
 import { LoginService } from '../app/components/login/login.service';
 import { SignUpService } from '../app/components/sign-up/sign-up.service';
@@ -44,6 +45,7 @@ angular.module('soopaheroClient',
   .constant('SH_CONSTANTS', constants)
   .run(runBlock)
   .factory('_', lodashFactory)
+  .factory('encrypt', encryptFactory)
   .controller('MainController', MainController)
   .controller('LoginController', LoginController)
   .controller('SignUpController', SignUpController)

@@ -1,7 +1,12 @@
 export class HelperService {
-  constructor() {
+  constructor(SH_CONSTANTS) {
     'ngInject';
 
+    this.apiUrl = `${SH_CONSTANTS.PROTOCOL}://${SH_CONSTANTS.DOMAIN}/api/`;
+  }
+
+  getApiUrl(action) {
+    return this.apiUrl + action;
   }
 
   isEmail(string) {
