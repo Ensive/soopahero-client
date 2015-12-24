@@ -37,6 +37,12 @@
       "HAVE_AN_ACCOUNT": "Have an account",
       "LOG_IN": "@:SH.HEADER.LOG_IN",
       "SIGN_UP": "@:SH.HEADER.SIGN_UP"
+    },
+    "ERRORS": {
+      "MIN_LENGTH": "This field is too short",
+      "MAX_LENGTH": "This field is too long",
+      "REQUIRED": "This field is required",
+      "EMAIL": "Your email address is invalid"
     }
   }
 }
