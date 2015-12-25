@@ -5,7 +5,7 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { constants } from './index.constants';
 import { runBlock } from './index.run';
-import { lodashFactory } from '../app/components/utils/lodash.factory';
+import { lodashProvider } from 'components/utils/lodash.provider.js';
 import { encryptFactory } from '../app/components/utils/encrypt.factory';
 
 // controllers
@@ -44,7 +44,7 @@ angular.module('soopaheroClient',
   .config(routerConfig)
   .constant('SH_CONSTANTS', constants)
   .run(runBlock)
-  .factory('_', lodashFactory)
+  .provider('_', lodashProvider)
   .factory('encrypt', encryptFactory)
   .controller('MainController', MainController)
   .controller('LoginController', LoginController)
