@@ -4,6 +4,7 @@ export function FooterDirective() {
   return {
     restrict: 'E',
     templateUrl: 'app/components/footer/footer.html',
+    scope: true,
     controller: FooterController,
     controllerAs: 'vm',
     bindToController: true,
