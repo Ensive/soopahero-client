@@ -12,9 +12,25 @@
     color: $sh-text
     font-size: 14px
     height: 36px
+    line-height: 16px
     padding: 0 14px
     width: 270px
-    line-height: 16px
+
+    &:focus
+      outline: 0
+      outline-offset: 0
+
+    // error
+    &.ng-invalid.ng-touched
+      border: 1px solid $sh-error-light
+      &:focus
+        box-shadow: 0 0 3px $sh-error-light
+        border-width: 2px
+
+    // success
+    &.ng-valid.ng-touched
+      border-color: $sh-green
+
     @media only screen and (max-width: 959px)
       min-width: 270px
       width: 100%
@@ -24,3 +40,11 @@
   color: #929292
   line-height: 15px
   margin: 0 0 5px 0
+
+.sh-error-messages
+
+  &__item
+    color: $sh-error
+    font-size: 13px
+    line-height: 1
+    margin: 3px 0 0 3px

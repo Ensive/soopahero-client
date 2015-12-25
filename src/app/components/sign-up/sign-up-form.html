@@ -1,17 +1,51 @@
-<form class="sign-up-form sh-form" layout="column" ng-submit="vm.register()">
+<form class="sign-up-form sh-form"
+      layout="column"
+      name="signUpForm"
+      ng-submit="vm.register()"
+      novalidate>
 
   <div class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_USERNAME"></label>
-    <input type="text" class="sh-input-field" ng-model="vm.user.nickname">
+    <input class="sh-input-field"
+           name="nickname"
+           ng-model="vm.user.nickname"
+           ng-minlength="5"
+           ng-maxlength="60"
+           spellcheck="false"
+           type="text"
+           required>
+    <div ng-messages="signUpForm.nickname.$error" ng-if="signUpForm.nickname.$touched" role="alert">
+      <div ng-messages-include="app/components/error-messages/error-messages.html"></div>
+    </div>
   </div>
   <div class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_EMAIL"></label>
-    <input type="email" class="sh-input-field" ng-model="vm.user.email">
+    <input class="sh-input-field"
+           name="email"
+           ng-model="vm.user.email"
+           ng-minlength="6"
+           ng-maxlength="60"
+           type="email"
+           spellcheck="false"
+           required>
+    <div class=sh-error-messages" ng-messages="signUpForm.email.$error" ng-if="signUpForm.email.$touched" role="alert">
+      <p class="sh-error-messages__item" ng-message="email" translate-once="SH.ERRORS.EMAIL"></p>
+      <div ng-messages-include="app/components/error-messages/error-messages.html"></div>
+    </div>
   </div>
 
   <div class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_PASSWORD"></label>
-    <input type="password" class="sh-input-field" ng-model="vm.user.password">
+    <input class="sh-input-field"
+           name="password"
+           ng-model="vm.user.password"
+           ng-minlength="6"
+           ng-maxlength="60"
+           type="password"
+           required>
+    <div class=sh-error-messages" ng-messages="signUpForm.password.$error" ng-if="signUpForm.password.$touched" role="alert">
+      <div ng-messages-include="app/components/error-messages/error-messages.html"></div>
+    </div>
   </div>
 
   <div class="sh-input-container sh-text md-body-1" layout="row" layout-align="start center">
@@ -21,6 +55,7 @@
     </div>
     <span flex></span>
     <md-button class="sh-button sh-button--login sh-button--less-margin"
+               ng-disabled="signUpForm.$invalid"
                type="submit"
                translate-once="SH.SIGN_UP.SIGN_UP"
                aria-label="Sign up"></md-button>
