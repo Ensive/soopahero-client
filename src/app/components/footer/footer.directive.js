@@ -1,7 +1,7 @@
 export function FooterDirective() {
   'ngInject';
 
-  let directive = {
+  return {
     restrict: 'E',
     templateUrl: 'app/components/footer/footer.html',
     controller: FooterController,
@@ -9,8 +9,6 @@ export function FooterDirective() {
     bindToController: true,
     replace: true
   };
-
-  return directive;
 }
 
 class FooterController {
