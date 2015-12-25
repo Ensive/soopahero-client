@@ -5,7 +5,7 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { constants } from './index.constants';
 import { runBlock } from './index.run';
-import { lodashProvider } from 'components/utils/lodash.provider.js';
+import { lodashProvider } from '../app/components/utils/lodash.provider';
 import { encryptFactory } from '../app/components/utils/encrypt.factory';
 
 // controllers
