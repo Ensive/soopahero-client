@@ -36,7 +36,6 @@ angular.module('soopaheroClient',
     'ngResource',
     'ngMaterial',
     'ui.router',
-    'toastr',
     'pascalprecht.translate',
     'tmh.dynamicLocale'])
   //.constant('moment', moment)
