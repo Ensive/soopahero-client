@@ -1,5 +1,5 @@
 export function runBlock (_, encrypt, $rootScope, $log) {
   'ngInject';
-  $rootScope.home = '/';
+  $rootScope.home = '#/';
   $log.debug('runBlock end');
 }
