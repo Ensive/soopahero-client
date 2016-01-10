@@ -15,6 +15,7 @@
     line-height: 16px
     padding: 0 14px
     width: 270px
+    transition: box-shadow 0.2s ease
 
     &:focus
       outline: 0
@@ -24,8 +25,7 @@
     &.ng-invalid.ng-touched
       border: 1px solid $sh-error-light
       &:focus
-        box-shadow: 0 0 3px $sh-error-light
-        border-width: 2px
+        box-shadow: 0 0 5px $sh-error-light
 
     // success
     &.ng-valid.ng-touched
