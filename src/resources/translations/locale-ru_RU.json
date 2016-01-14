@@ -37,6 +37,12 @@
       "HAVE_AN_ACCOUNT": "Уже есть аккаунт",
       "LOG_IN": "@:SH.HEADER.LOG_IN",
       "SIGN_UP": "@:SH.HEADER.SIGN_UP"
+    },
+    "ERRORS": {
+      "MIN_LENGTH": "Слишком короткое значение",
+      "MAX_LENGTH": "Слишком длинное значение",
+      "REQUIRED": "Обязательное для заполнения",
+      "EMAIL": "Неверный электронный адрес"
     }
   }
 }
