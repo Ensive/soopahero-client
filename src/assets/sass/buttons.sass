@@ -16,17 +16,18 @@ a.sh-button
 
   &--login,
   &--fp
-    background-color: $sh-green
+    background-color: $sh-brand-color
     border: 1px solid transparent
     color: #fff
     &:not([disabled]):hover,
     &:not([disabled]):focus
-      background-color: #ADC543
+      background-color: darken($sh-brand-color, 10%)
 
   &--login
     margin-right: 5px
 
   &--fp
+    margin: 0 0 0 5px
     @media only screen and (max-width: 599px)
       margin: 0 0 5px 0
 
