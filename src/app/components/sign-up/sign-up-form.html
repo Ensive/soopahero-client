@@ -4,11 +4,12 @@
       ng-submit="vm.register()"
       novalidate>
 
-  <div class="sh-input-container" layout="column">
+  <div ng-class="{ 'has-error': signUpForm.nickname.$touched && signUpForm.nickname.$invalid, 'has-success': signUpForm.nickname.$touched && signUpForm.nickname.$valid }" class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_USERNAME"></label>
     <input class="sh-input-field"
            name="nickname"
            ng-model="vm.user.nickname"
+           ng-model-options="{ debounce: 500 }"
            ng-minlength="5"
            ng-maxlength="60"
            spellcheck="false"
@@ -18,11 +19,12 @@
       <div ng-messages-include="app/components/error-messages/error-messages.html"></div>
     </div>
   </div>
-  <div class="sh-input-container" layout="column">
+  <div ng-class="{ 'has-error': signUpForm.email.$touched && signUpForm.email.$invalid, 'has-success': signUpForm.email.$touched && signUpForm.email.$valid }" class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_EMAIL"></label>
     <input class="sh-input-field"
            name="email"
            ng-model="vm.user.email"
+           ng-model-options="{ debounce: 500 }"
            ng-minlength="6"
            ng-maxlength="60"
            type="email"
@@ -34,11 +36,12 @@
     </div>
   </div>
 
-  <div class="sh-input-container" layout="column">
+  <div ng-class="{ 'has-error': signUpForm.password.$touched && signUpForm.password.$invalid, 'has-success': signUpForm.password.$touched && signUpForm.password.$valid }" class="sh-input-container" layout="column">
     <label class="sh-label" translate-once="SH.SIGN_UP.LABEL_PASSWORD"></label>
     <input class="sh-input-field"
            name="password"
            ng-model="vm.user.password"
+           ng-model-options="{ debounce: 500 }"
            ng-minlength="6"
            ng-maxlength="60"
            type="password"
