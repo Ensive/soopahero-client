@@ -16,7 +16,7 @@ export class SignUpService {
   }
 
   register(user) {
-    this.Register.save(angular.toJson(user), _registerSuccess.bind(this), _registerError.bind(this))
+    return this.Register.save(angular.toJson(user), _registerSuccess.bind(this), _registerError.bind(this)).$promise;
   }
 
   getUser() {
@@ -36,6 +36,7 @@ function _registerSuccess(data, headers) {
   this.user.token = data.token ? data.token : null;
   this.user = this._.merge(this.user, this.newUser);
   this.dialogService.hideDialog();
+  // @todo: save user data and token in the local storage
   // @todo: spinning; show loginDialog; confirm email message
 }
 

@@ -58,7 +58,7 @@
     </div>
     <span flex></span>
     <md-button class="sh-button sh-button--login sh-button--less-margin"
-               ng-disabled="signUpForm.$invalid"
+               ng-disabled="signUpForm.$invalid || vm.isSubmitDisabled"
                type="submit"
                translate-once="SH.SIGN_UP.SIGN_UP"
                aria-label="Sign up"></md-button>
